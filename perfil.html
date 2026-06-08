@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCA - Perfil</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="home.html">ARCA</a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="denuncia.html">Denuncia</a>
+      <a href="adocao.html">Adoção</a>
+      <a href="castracao.html">Castração</a>
+      <a href="pos-adocao.html">Pós-adoção</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <a class="user-link" href="perfil.html"><span>Olá, <span class="js-user-name">Seu Nome</span></span><span class="avatar"></span></a>
+  </header>
+
+  <main class="profile-shell">
+    <aside class="sidebar">
+      <section class="profile-head">
+        <div>
+          <div class="profile-photo"></div>
+          <h2>Seu nome</h2>
+          <p>seuemail@email.com</p>
+        </div>
+      </section>
+
+      <nav class="side-menu">
+        <h3>Menu principal</h3>
+        <a href="#">Visão geral</a>
+        <a href="#">Meus pets</a>
+        <a href="#">Adoções</a>
+        <a href="#">Mensagens</a>
+        <a href="#">Denuncias</a>
+
+        <h3 style="margin-top:34px;">Conta</h3>
+        <a href="#">Dados pessoais</a>
+        <a href="#">Notificações</a>
+        <a href="#">Privacidade</a>
+      </nav>
+
+      <a class="logout" href="index.html">Sair da conta</a>
+    </aside>
+
+    <section class="dashboard">
+      <div class="dashboard-top">
+        <div>
+          <p class="welcome">Bem-vindo de volta</p>
+          <h1>Ola, <span class="js-user-name">Seu Nome</span></h1>
+        </div>
+        <button class="settings-square" type="button" aria-label="Configurações"></button>
+      </div>
+
+      <section class="metric-grid">
+        <article class="metric-card"><strong>1</strong><span>Pets cadastrados</span></article>
+        <article class="metric-card"><strong>2</strong><span>Denuncias enviadas</span></article>
+        <article class="metric-card"><strong>4</strong><span>Mensagens não lidas</span></article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="dashboard-card">
+          <header>
+            <h2>Atividade recentes</h2>
+            <button class="small-btn" type="button">Ver tudo</button>
+          </header>
+          <div class="activity-list">
+            <div class="activity-item"><span class="activity-icon"></span><div><p>Check-in pós-adoção enviado</p><small>Dia 15 - Mel está se adaptando muito bem</small></div><span class="activity-date">Hoje</span></div>
+            <div class="activity-item"><span class="activity-icon"></span><div><p>Nova mensagem recebida</p><small>Equipe ARCA respondeu sua solicitação</small></div><span class="activity-date">Ontem</span></div>
+            <div class="activity-item"><span class="activity-icon"></span><div><p>Denúncia atualizada</p><small>Ocorrência #00124 - Em atendimento</small></div><span class="activity-date">3 dias</span></div>
+            <div class="activity-item"><span class="activity-icon"></span><div><p>Pet publicado para adoção</p><small>Thor foi publicado na galeria de adoção</small></div><span class="activity-date">1 sem</span></div>
+          </div>
+        </article>
+
+        <article class="dashboard-card">
+          <header>
+            <h2>Proximos check-ins</h2>
+            <button class="small-btn" type="button">Ver adoções</button>
+          </header>
+          <div class="check-row">
+            <span class="check-thumb"></span>
+            <div><h3>Tom</h3><p>Dia 30 - Adaptação completa</p></div>
+            <a class="btn" style="min-height:31px;margin-right:10px;" href="pos-adocao.html">Fazer check-in</a>
+          </div>
+          <div class="placeholder-line"></div>
+        </article>
+      </section>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

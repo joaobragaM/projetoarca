@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCA - Adoção</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="home.html">ARCA</a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="denuncia.html">Denuncia</a>
+      <a class="active" href="adocao.html">Adoção</a>
+      <a href="castracao.html">Castração</a>
+      <a href="pos-adocao.html">Pós-adoção</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <a class="user-link" href="perfil.html"><span>Olá, <span class="js-user-name">Seu Nome</span></span><span class="avatar"></span></a>
+  </header>
+
+  <section class="hero adocao-hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>Encontre seu novo<br><span class="accent">companheiro</span></h1>
+        <p>Conectamos pets que precisam de um lar com famílias que têm amor para dar. Adoção responsável, acompanhamento pós-adoção e suporte para tutores.</p>
+        <div class="hero-actions">
+          <button class="btn orange" data-scroll="#pets">Ver pets disponíveis</button>
+          <a class="btn" href="publicar-adocao.html">Quero doar um animal</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>2<span class="accent-number">k+</span></strong><span>Adoções</span></div>
+        <div class="stat"><strong>38</strong><span>Disponíveis</span></div>
+        <div class="stat"><strong>92<span class="accent-number">%</span></strong><span>Adaptações positivas</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main id="pets" class="page-section wide">
+    <h2 class="section-title">Pets disponíveis</h2>
+    <div class="filter-row" data-target=".pet-card">
+      <button class="pill active dark" data-filter="all">Todos</button>
+      <button class="pill" data-filter="caes">Cães</button>
+      <button class="pill" data-filter="gatos">Gatos</button>
+      <button class="pill" data-filter="outros">Outros</button>
+      <button class="pill" data-filter="adultos">Adultos</button>
+      <button class="pill" data-filter="filhotes">Filhotes</button>
+    </div>
+
+    <section class="pet-grid">
+      <article class="pet-card" data-category="gatos adultos">
+        <img src="assets/my-chocky-boy.jpg" alt="Tom">
+        <span class="age">5 anos</span>
+        <div class="pet-info">
+          <h3>Tom</h3>
+          <p>grande - macho</p>
+          <div class="tags"><span class="tag">Vacinado</span><span class="tag orange-tag">castrado</span><span class="tag green-tag">Dócil</span></div>
+          <button class="btn full" type="button">Tenho interesse</button>
+        </div>
+      </article>
+
+      <article class="pet-card" data-category="gatos filhotes">
+        <img src="assets/download-1.jpg" alt="Mink">
+        <span class="age">0 anos</span>
+        <div class="pet-info">
+          <h3>mink</h3>
+          <p>pequeno - macho</p>
+          <div class="tags"><span class="tag">Vacinado</span><span class="tag orange-tag">Dócil</span><span class="tag green-tag">Recém-nascido</span></div>
+          <button class="btn full" type="button">Tenho interesse</button>
+        </div>
+      </article>
+
+      <article class="pet-card" data-category="caes filhotes">
+        <img src="assets/download.jpg" alt="Liza">
+        <span class="age">1 anos</span>
+        <div class="pet-info">
+          <h3>Liza</h3>
+          <p>pequena - fêmea</p>
+          <div class="tags"><span class="tag">Vacinada</span><span class="tag orange-tag">castrada</span><span class="tag green-tag">Ativa</span></div>
+          <button class="btn full" type="button">Tenho interesse</button>
+        </div>
+      </article>
+
+      <article class="pet-card" data-category="caes adultos">
+        <img src="assets/download-2.jpg" alt="Pibble">
+        <span class="age">2 anos</span>
+        <div class="pet-info">
+          <h3>Pibble</h3>
+          <p>médio - macho</p>
+          <div class="tags"><span class="tag">Vacinado</span><span class="tag orange-tag">castrado</span><span class="tag green-tag">Brincalhão</span></div>
+          <button class="btn full" type="button">Tenho interesse</button>
+        </div>
+      </article>
+    </section>
+  </main>
+<footer class="site-footer">
+
+  <!-- CTA -->
+  <div class="sf-cta">
+    <div class="sf-cta-text">
+      <h2>Um pet está <em>esperando</em> por você.</h2>
+      <p>38 animais disponíveis para adoção. Castração gratuita para tutores do município de Serra – ES.</p>
+    </div>
+    <div class="sf-cta-btns">
+      <a href="adocao.html"   class="sf-btn-white">Ver pets disponíveis</a>
+      <a href="castracao.html" class="sf-btn-ghost">Castração gratuita</a>
+    </div>
+  </div>
+
+  <!-- GRID PRINCIPAL -->
+  <div class="sf-main">
+
+    <!-- Marca -->
+    <div class="sf-brand">
+      <a href="home.html" class="sf-logo">ARCA<span>.</span></a>
+      <p class="sf-sub">Serra – Espírito Santo</p>
+      <p class="sf-desc">Sistema municipal de proteção animal da Prefeitura de Serra – ES. Adoção responsável, castração gratuita e proteção animal desde 2021.</p>
+      <div class="sf-contacts">
+        <a href="tel:2732915000"            class="sf-contact"><span>📞</span>(27) 3291-5000</a>
+        <a href="mailto:arca@serra.es.gov.br" class="sf-contact"><span>✉️</span>arca@serra.es.gov.br</a>
+        <a href="#"                          class="sf-contact"><span>📍</span>Av. Talma Rodrigues Ribeiro, 5416 – Serra</a>
+      </div>
+      <div class="sf-socials">
+        <a href="#" class="sf-soc" title="Instagram">📸</a>
+        <a href="#" class="sf-soc" title="Facebook">👥</a>
+        <a href="#" class="sf-soc" title="WhatsApp">💬</a>
+        <a href="#" class="sf-soc" title="YouTube">🎥</a>
+      </div>
+    </div>
+
+    <!-- Serviços -->
+    <div class="sf-col">
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="adocao.html">Adoção</a></li>
+        <li><a href="castracao.html">Castração gratuita</a></li>
+        <li><a href="pos-adocao.html">Pós-adoção</a></li>
+        <li><a href="denuncia.html">Fazer denúncia</a></li>
+        <li><a href="publicar-adocao.html">Publicar animal</a></li>
+      </ul>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="sf-col">
+      <h4>Conteúdo</h4>
+      <ul>
+        <li><a href="home.html">Notícias</a></li>
+        <li><a href="home.html#dicas">Dicas de cuidados</a></li>
+        <li><a href="home.html#eventos">Eventos</a></li>
+        <li><a href="adocao.html">Galeria de pets</a></li>
+        <li><a href="contato.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Institucional -->
+    <div class="sf-col">
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="contato.html">Sobre o programa</a></li>
+        <li><a href="contato.html#equipe">Nossa equipe</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="perfil.html">Meu perfil</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="sf-bottom">
+    <span class="sf-copy">© 2026 <strong>Programa ARCA</strong> · Prefeitura Municipal de Serra – ES</span>
+    <div class="sf-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos de uso</a>
+      <a href="#">Acessibilidade</a>
+    </div>
+  </div>
+
+</footer>
+  <script src="app.js"></script>
+</body>
+</html>
+
+

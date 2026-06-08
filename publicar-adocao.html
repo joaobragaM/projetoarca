@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCA - Publicar Adoção</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="home.html">ARCA</a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="denuncia.html">Denuncia</a>
+      <a class="active" href="adocao.html">Adoção</a>
+      <a href="castracao.html">Castração</a>
+      <a href="pos-adocao.html">Pós-adoção</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <a class="user-link" href="perfil.html"><span>Olá, <span class="js-user-name">Seu Nome</span></span><span class="avatar"></span></a>
+  </header>
+
+  <main class="preview-layout">
+    <form id="publicationForm" class="form-card js-form" data-success="Publicação de adoção cadastrada com sucesso.">
+      <header class="form-card-head">
+        <h1>Formulario de adoção</h1>
+        <p>Preencha os dados para colocar um pet para adoção</p>
+      </header>
+
+      <section class="form-card-body">
+        <div class="field-group">
+          <span class="form-label">Foto do animal<span class="required">*</span></span>
+          <label class="upload-box">
+            <input type="file" accept="image/*" data-preview-target="#adoptionPreviewImage">
+            <span class="upload-icon"></span>
+            <span>Enviar foto<small class="file-name">JPG, PNG ou HEIC</small></span>
+          </label>
+        </div>
+
+        <div class="field-group">
+          <label for="animalName">Nome do animal<span class="required">*</span></label>
+          <input id="animalName" data-progress="name" type="text" value="Caramelo">
+        </div>
+
+        <div class="split-fields">
+          <div class="field-group">
+            <label for="animalAge">Idade do animal<span class="required">*</span></label>
+            <select id="animalAge" data-progress="age">
+              <option>1 a 3 anos</option>
+              <option>Até 1 ano</option>
+              <option>4 anos ou mais</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="animalType">Tipo<span class="required">*</span></label>
+            <select id="animalType" data-progress="type">
+              <option>Cão</option>
+              <option>Gato</option>
+              <option>Outro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="split-fields">
+          <div class="field-group">
+            <span class="form-label">Sexo<span class="required">*</span></span>
+            <div class="choice-row">
+              <button class="choice small active" type="button">Macho</button>
+              <button class="choice small" type="button">Fêmea</button>
+            </div>
+          </div>
+          <div class="field-group">
+            <span class="form-label">Porte<span class="required">*</span></span>
+            <div class="choice-row">
+              <button class="choice small" type="button">Pequeno</button>
+              <button class="choice small active" type="button">Médio</button>
+              <button class="choice small" type="button">Grande</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <span class="form-label">Características<span class="required">*</span></span>
+          <div class="choice-row" data-multi="true">
+            <button class="choice small active" type="button">Vacinado</button>
+            <button class="choice small active" type="button">Castrado</button>
+            <button class="choice small" type="button">Vermifugado</button>
+            <button class="choice small active" type="button">Dócil</button>
+            <button class="choice small" type="button">Brincalhão</button>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="animalDesc">Descrição<span class="required">*</span></label>
+          <textarea id="animalDesc" data-progress="description">Descrição aparecerá aqui</textarea>
+        </div>
+
+        <hr class="divider">
+
+        <div class="split-fields">
+          <div class="field-group">
+            <label for="ownerName">Seu nome<span class="required">*</span></label>
+            <input id="ownerName" data-progress="contact" type="text" value="João Marcelo Braga">
+          </div>
+          <div class="field-group">
+            <label for="ownerPhone">Seu telefone<span class="required">*</span></label>
+            <input id="ownerPhone" data-progress="contact" type="text" value="(27) 996465225">
+          </div>
+        </div>
+
+        <button class="btn black full" type="submit">Publicar adoção</button>
+      </section>
+    </form>
+
+    <aside>
+      <h2 style="font-size:16px;font-weight:500;margin:10px 0 14px;">Pre-visualização</h2>
+      <article class="preview-card">
+        <img id="adoptionPreviewImage" src="assets/adocao-dog.jpg" alt="Pré-visualização do animal">
+        <div class="preview-content">
+          <h2 id="previewName">Caramelo</h2>
+          <div class="preview-meta"><span id="previewAge">1 a 3 anos</span><span id="previewType">Cão</span></div>
+          <div class="tags"><span class="tag">Vacinado</span><span class="tag orange-tag">castrado</span><span class="tag green-tag">Dócil</span></div>
+          <div id="previewDesc" class="preview-desc">"Descrição aparecerá aqui"</div>
+          <button class="muted-action" type="button">Pronto para publicar</button>
+        </div>
+      </article>
+
+      <section class="progress-card">
+        <h3>Progresso de cadastro</h3>
+        <div class="progress-list">
+          <span data-progress-item="photo"><i class="dot"></i>Foto do pet</span>
+          <span data-progress-item="name"><i class="dot"></i>Nome do animal</span>
+          <span data-progress-item="age"><i class="dot"></i>Idade e tipo</span>
+          <span data-progress-item="description"><i class="dot"></i>Descrição</span>
+          <span data-progress-item="contact"><i class="dot"></i>Dados de contato</span>
+        </div>
+      </section>
+    </aside>
+  </main>
+  <footer class="site-footer">
+
+  <!-- CTA -->
+  <div class="sf-cta">
+    <div class="sf-cta-text">
+      <h2>Um pet está <em>esperando</em> por você.</h2>
+      <p>38 animais disponíveis para adoção. Castração gratuita para tutores do município de Serra – ES.</p>
+    </div>
+    <div class="sf-cta-btns">
+      <a href="adocao.html"   class="sf-btn-white">Ver pets disponíveis</a>
+      <a href="castracao.html" class="sf-btn-ghost">Castração gratuita</a>
+    </div>
+  </div>
+
+  <!-- GRID PRINCIPAL -->
+  <div class="sf-main">
+
+    <!-- Marca -->
+    <div class="sf-brand">
+      <a href="home.html" class="sf-logo">ARCA<span>.</span></a>
+      <p class="sf-sub">Serra – Espírito Santo</p>
+      <p class="sf-desc">Sistema municipal de proteção animal da Prefeitura de Serra – ES. Adoção responsável, castração gratuita e proteção animal desde 2021.</p>
+      <div class="sf-contacts">
+        <a href="tel:2732915000"            class="sf-contact"><span>📞</span>(27) 3291-5000</a>
+        <a href="mailto:arca@serra.es.gov.br" class="sf-contact"><span>✉️</span>arca@serra.es.gov.br</a>
+        <a href="#"                          class="sf-contact"><span>📍</span>Av. Talma Rodrigues Ribeiro, 5416 – Serra</a>
+      </div>
+      <div class="sf-socials">
+        <a href="#" class="sf-soc" title="Instagram">📸</a>
+        <a href="#" class="sf-soc" title="Facebook">👥</a>
+        <a href="#" class="sf-soc" title="WhatsApp">💬</a>
+        <a href="#" class="sf-soc" title="YouTube">🎥</a>
+      </div>
+    </div>
+
+    <!-- Serviços -->
+    <div class="sf-col">
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="adocao.html">Adoção</a></li>
+        <li><a href="castracao.html">Castração gratuita</a></li>
+        <li><a href="pos-adocao.html">Pós-adoção</a></li>
+        <li><a href="denuncia.html">Fazer denúncia</a></li>
+        <li><a href="publicar-adocao.html">Publicar animal</a></li>
+      </ul>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="sf-col">
+      <h4>Conteúdo</h4>
+      <ul>
+        <li><a href="home.html">Notícias</a></li>
+        <li><a href="home.html#dicas">Dicas de cuidados</a></li>
+        <li><a href="home.html#eventos">Eventos</a></li>
+        <li><a href="adocao.html">Galeria de pets</a></li>
+        <li><a href="contato.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Institucional -->
+    <div class="sf-col">
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="contato.html">Sobre o programa</a></li>
+        <li><a href="contato.html#equipe">Nossa equipe</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="perfil.html">Meu perfil</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="sf-bottom">
+    <span class="sf-copy">© 2026 <strong>Programa ARCA</strong> · Prefeitura Municipal de Serra – ES</span>
+    <div class="sf-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos de uso</a>
+      <a href="#">Acessibilidade</a>
+    </div>
+  </div>
+
+</footer>
+  <script src="app.js"></script>
+</body>
+</html>

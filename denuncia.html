@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCA - Denúncia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="home.html">ARCA</a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a class="active" href="denuncia.html">Denuncia</a>
+      <a href="adocao.html">Adoção</a>
+      <a href="castracao.html">Castração</a>
+      <a href="pos-adocao.html">Pós-adoção</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <a class="user-link" href="perfil.html"><span>Olá, <span class="js-user-name">Seu Nome</span></span><span class="avatar"></span></a>
+  </header>
+
+  <section class="alert-bar">
+    <div class="alert-inner">
+      <div>
+        <h1>Animais em situação de rua ou de violência</h1>
+        <p>Sua denúncia é analisada em até 24h. Em casos de emergência, entre em contato pelo (27) 3291-5000.</p>
+      </div>
+      <div class="emergency">Atendimento 24h</div>
+    </div>
+  </section>
+
+  <main class="denuncia-layout">
+    <section class="denuncia-intro">
+      <div>
+        <h1>Relate um animal em<br><span class="danger">situação de rua</span></h1>
+        <p>Preencha o formulário com foto e localização. Nossa equipe de proteção animal entrará em ação assim que possível.</p>
+      </div>
+      <aside class="tips">
+        <strong>DICAS PARA UMA BOA DENÚNCIA</strong>
+        - Tire a foto com uma boa iluminação, de perto se for seguro.<br>
+        - Informe o endereço completo: rua, número, bairro e ponto de referência.<br>
+        - Descreva se o animal tem ferimentos visíveis ou está em risco imediato.<br>
+        - Não tente capturar o animal sozinho — deixe para a equipe especializada.
+      </aside>
+    </section>
+
+    <form class="danger-card js-form" data-success="Denúncia enviada. A equipe analisará o caso em até 24h.">
+      <h2>Dados da denúncia</h2>
+      <div class="field-group">
+        <span class="form-label">Foto do animal ou do ambiente de violência <span class="required">*</span></span>
+        <label class="upload-box">
+          <input type="file" accept="image/*" data-preview-target="#denunciaPreview">
+          <span class="upload-icon"></span>
+          <span>Enviar foto<small class="file-name">JPG, PNG ou HEIC</small></span>
+        </label>
+      </div>
+
+      <div class="field-group denuncia-animal">
+        <span class="form-label">Tipo de animal</span>
+        <div class="choice-row">
+          <button class="choice small active" type="button">Cachorro</button>
+          <button class="choice small" type="button">Gato</button>
+          <button class="choice small" type="button">Ave</button>
+          <button class="choice small" type="button">outro</button>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <span class="form-label">Nível de Urgência <span class="required">*</span></span>
+        <div class="urgency-row">
+          <button class="urgency low" type="button">Baixa</button>
+          <button class="urgency medium" type="button">Média</button>
+          <button class="urgency high active" type="button">Alta</button>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label for="denunciaLocal">Localização<span class="required">*</span></label>
+        <input id="denunciaLocal" type="text" value="Rua Fictícia, Vila Velha">
+      </div>
+
+      <div class="field-group">
+        <label for="denunciaDesc">Descrição <span class="required">*</span></label>
+        <textarea id="denunciaDesc" placeholder="Descreva o estado do animal, comportamento, se há ferimentos, há quanto tempo está no local"></textarea>
+      </div>
+
+      <button class="btn full" style="background:var(--red);min-height:20px;font-size:10px;" type="submit">Fazer Denuncia</button>
+    </form>
+
+    <aside>
+      <section class="image-panel">
+        <h3>IMAGEM DO ANIMAL ENVIADA</h3>
+        <div id="denunciaPreview" class="image-empty">A FOTO APARECERÁ AQUI</div>
+        <div class="file-note">Nenhum arquivo selecionado<br>Selecione uma foto do animal</div>
+      </section>
+
+      <section class="summary-panel">
+        <h3>Resumo da denúncia</h3>
+        <div class="summary-line"><span></span><span id="summaryAnimal">Cachorro</span></div>
+        <div class="summary-line"><span></span><span class="summary-dot" id="summaryUrgency">Alta</span></div>
+        <div class="summary-line"><span></span><span id="summaryPlace">Rua fictícia, Vila Velha</span></div>
+      </section>
+    </aside>
+  </main>
+<footer class="site-footer">
+
+  <!-- CTA -->
+  <div class="sf-cta">
+    <div class="sf-cta-text">
+      <h2>Um pet está <em>esperando</em> por você.</h2>
+      <p>38 animais disponíveis para adoção. Castração gratuita para tutores do município de Serra – ES.</p>
+    </div>
+    <div class="sf-cta-btns">
+      <a href="adocao.html"   class="sf-btn-white">Ver pets disponíveis</a>
+      <a href="castracao.html" class="sf-btn-ghost">Castração gratuita</a>
+    </div>
+  </div>
+
+  <!-- GRID PRINCIPAL -->
+  <div class="sf-main">
+
+    <!-- Marca -->
+    <div class="sf-brand">
+      <a href="home.html" class="sf-logo">ARCA<span>.</span></a>
+      <p class="sf-sub">Serra – Espírito Santo</p>
+      <p class="sf-desc">Sistema municipal de proteção animal da Prefeitura de Serra – ES. Adoção responsável, castração gratuita e proteção animal desde 2021.</p>
+      <div class="sf-contacts">
+        <a href="tel:2732915000"            class="sf-contact"><span>📞</span>(27) 3291-5000</a>
+        <a href="mailto:arca@serra.es.gov.br" class="sf-contact"><span>✉️</span>arca@serra.es.gov.br</a>
+        <a href="#"                          class="sf-contact"><span>📍</span>Av. Talma Rodrigues Ribeiro, 5416 – Serra</a>
+      </div>
+      <div class="sf-socials">
+        <a href="#" class="sf-soc" title="Instagram">📸</a>
+        <a href="#" class="sf-soc" title="Facebook">👥</a>
+        <a href="#" class="sf-soc" title="WhatsApp">💬</a>
+        <a href="#" class="sf-soc" title="YouTube">🎥</a>
+      </div>
+    </div>
+
+    <!-- Serviços -->
+    <div class="sf-col">
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="adocao.html">Adoção</a></li>
+        <li><a href="castracao.html">Castração gratuita</a></li>
+        <li><a href="pos-adocao.html">Pós-adoção</a></li>
+        <li><a href="denuncia.html">Fazer denúncia</a></li>
+        <li><a href="publicar-adocao.html">Publicar animal</a></li>
+      </ul>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="sf-col">
+      <h4>Conteúdo</h4>
+      <ul>
+        <li><a href="home.html">Notícias</a></li>
+        <li><a href="home.html#dicas">Dicas de cuidados</a></li>
+        <li><a href="home.html#eventos">Eventos</a></li>
+        <li><a href="adocao.html">Galeria de pets</a></li>
+        <li><a href="contato.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Institucional -->
+    <div class="sf-col">
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="contato.html">Sobre o programa</a></li>
+        <li><a href="contato.html#equipe">Nossa equipe</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="perfil.html">Meu perfil</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="sf-bottom">
+    <span class="sf-copy">© 2026 <strong>Programa ARCA</strong> · Prefeitura Municipal de Serra – ES</span>
+    <div class="sf-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos de uso</a>
+      <a href="#">Acessibilidade</a>
+    </div>
+  </div>
+
+</footer>
+  <script src="app.js"></script>
+</body>
+
+</html>
+
+
